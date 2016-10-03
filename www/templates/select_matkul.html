@@ -1,0 +1,28 @@
+<ion-view view-title="Matakuliah">
+<ion-view>
+	<ion-content >
+		<ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="showData()">
+        </ion-refresher>
+		<div class="list card" ng-repeat="post in posts">
+
+			<a class="item item-avatar positive" href="#/app/home/{{post.id}}">
+				<img src="img/{{post.img}}">
+				<h2>{{post.title}}</h2>
+				<p>{{post.nama_dosen}} | {{post.kategori}}</p>
+			</a>
+
+			<div class="item item-body" >
+				<div ng-bind-html="post.intro | cut:true:150	:' ...' " style="margin-top: -10px;">
+				</div>
+				<p> 
+					<a href="#" class="subdued"><span class="icon ion-eye"></span> {{post.view}} view</a>
+					<a href="#" class="subdued" style="float: right;"><span class="icon ion-calendar"></span> {{post.tanggal}}</a>
+				</p>
+			</div>
+
+		</div>
+	</ion-content>
+</ion-view>
+</ion-view>

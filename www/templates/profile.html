@@ -1,0 +1,42 @@
+<ion-view view-title="Profile">
+  <ion-content>
+      <div id="profile-bg"></div>
+      <div id="content" ng-repeat="data in datas">
+        <div id="profile-info">
+          <img id="profile-image" src="img/profile.jpg">
+          <h3 id="profile-name">{{data.nama}}</h3>
+          <span id="profile-description">
+            {{data.nim}} | universitas pamulang
+          </span>
+        </div>
+        <ion-list>
+          <ion-item>
+            <div class="row">
+                <div class="col">NIM</div>
+                <div class="col col-75 item-text-wrap">{{data.nim}}</div>   
+            </div>
+          </ion-item>
+          <ion-item >
+            <div class="row">
+                <div class="col">Nama</div>
+                <div class="col col-75 item-text-wrap">{{data.nama}}</div>   
+            </div>
+          </ion-item>
+          <ion-item >
+            <div class="row">
+                <div class="col">Email</div>
+                <div class="col col-75 item-text-wrap">{{data.email}}</div>   
+            </div>
+          </ion-item>
+          <ion-item >
+            <div class="row">
+                <div class="col">Alamat</div>
+                <div class="col col-75 item-text-wrap">
+                      {{data.alamat}}
+                  </div>   
+            </div>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-content>
+</ion-view>

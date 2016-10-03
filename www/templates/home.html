@@ -1,0 +1,53 @@
+<!-- <ion-side-menus enable-menu-with-back-views="true">
+</ion-side-menus> -->
+<ion-view view-title="Home" id="home">
+	<ion-content> 
+	<ion-slide-box auto-play="true" does-continue="true" style="position: relative;">   
+	<ion-slide >
+        <img src="img/banner1.jpg" style="width:100%;height:auto;"/>
+    </ion-slide>
+    <ion-slide >
+        <img src="img/banner2.jpg" style="width:100%;height:auto;"/>
+    </ion-slide>
+    <ion-slide >
+        <img src="img/banner3.jpg" style="width:100%;height:auto;"/>
+    </ion-slide> 
+    </ion-slide-box>
+
+	<div class="list">
+
+		<div class="row" style="margin-top: 5px;">
+			<div class="col">
+				<a href="#/app/matakuliah/{{idUser}}" class="button button-stable  eag-home-button" style="border-width:0px;">
+					<img src="img/menu/matakuliah.png" width="100%"> 
+				</a>
+			</div>
+
+  			<div class="col" ng-show="(jumlah_update === 0) || (jumlah_update === undefined)">
+  				<a href="#/app/update" class="button button-stable  eag-home-button" style="border-width:0px;">
+  					<img src="img/menu/view_update.png" width="100%" > 
+  				</a> 
+  			</div>
+
+  			<div class="col" ng-show="jumlah_update === 1">
+  				<a href="#/app/update" class="button button-stable  eag-home-button" style="border-width:0px;">
+  					<img src="img/menu/view_update_new.png" width="100%" > 
+  				</a>
+  			</div>
+		</div>
+		<div class="row" >
+			<div class="col">
+				<a href="#/app/profile" class="button button-stable  eag-home-button" style="border-width:0px;">
+					<img src="img/menu/profile.png" width="100%">
+				</a>
+			</div>
+			<div class="col">
+				<a href="#" class="button button-stable  eag-home-button" ng-click="logout()" style="border-width:0px;">
+					<img src="img/menu/logout.png" width="100%">
+				</a>
+			</div>
+		</div>
+		
+	</div>
+	</ion-content>
+</ion-view>

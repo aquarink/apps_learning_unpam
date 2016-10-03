@@ -1,0 +1,25 @@
+<ion-view view-title="Matakuliah">
+	<ion-content>
+		<ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="update()">
+        </ion-refresher>
+		<div class="list card" ng-repeat="dosen in dosens">
+
+			<div class="item item-avatar">
+				<img src="img/dosen.png">
+				<h2>{{dosen.nama}}</h2>
+				<p>{{dosen.matakuliah}} | Universitas Pamulang </p>
+			</div>
+
+			<div class="item item-image">
+				<img src="img/{{dosen.matakuliah}}.jpg" width="100px">
+			</div>
+	        <a class="item item-icon-left positive" href="#/app/detail_matkul/{{dosen.id_dosen}}">
+				<i class="icon ion-android-bookmark"></i>
+				Masuk Matakuliah
+			</a>
+		</div>
+		
+	</ion-content>
+</ion-view>

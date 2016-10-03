@@ -1,0 +1,17 @@
+<ion-view view-title="Matakuliah">
+    <ion-content>
+         <hr>
+        <button class="button button-icon icon ion-ios-plus-outline" ng-click="goAdd()">
+        </button>
+        <button class="button button-icon icon ion-ios-plus-outline" ng-click="show()">
+        </button>
+        <button class="button button-icon icon ion-ios-plus-outline" ng-click="delete()" style="float:right;">
+        </button>
+        <hr>
+       <ion-item ng-click="click(data)" ng-repeat="data in datas" type="item-text-wrap">
+            <h2>{{data.name}}</h2>
+            <p>{{data.addr}}</p>
+            <p>{{data.tlp}}</p>
+        </ion-item>
+    </ion-content>
+</ion-view>

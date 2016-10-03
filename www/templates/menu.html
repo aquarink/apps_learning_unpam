@@ -1,0 +1,40 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar bar-header bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left" >
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar style="height: auto !important;">
+      <div class="item item-avatar" style="border: none;" ng-repeat="user in logins"> 
+        <img src="img/dosen.png">
+        <h2>{{user.nama}}</h2> 
+        <p ng-bind="date | date:'dd-MM-yyyy'"></p>
+      </div>
+    </ion-header-bar>
+    <ion-content style="top: 80px;">
+      <ion-list>
+        <!-- <ion-item menu-close ng-click="login()">
+          Login
+        </ion-item> -->
+        <ion-item menu-close href="#/app/home">
+          <span class="icon ion-ios-home"></span> Home
+        </ion-item>
+        <ion-item menu-close href="#/app/profile"> 
+          <span class="icon ion-person"></span> Profile
+        </ion-item>
+        <ion-item menu-close href="#" ng-click="exit()">
+          <span class="icon ion-ios-close"></span> Exit
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
